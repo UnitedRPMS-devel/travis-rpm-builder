@@ -10,7 +10,7 @@
 1. Make you changes in code and select a targed in `.travis.yml`. For example, we need to build new ffmpeg release for Fedora 25 and enable notification for Slack:
 ``` Yaml
 mock_travis:
-  mock_config: fedora-25-x86_64
+  mock_config: fedora-25-x86_64 (fedora-24-x86_64 or fedora-rawhide-x86_64)
   packages_buildrequires_git: UnitedRPMs/ffmpeg
 sudo: required
 services:
