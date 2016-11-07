@@ -1,0 +1,25 @@
+mock_travis:
+  mock_config: fedora-25-x86_64
+  packages_buildrequires_git: UnitedRPMs/gradio
+sudo: required
+services:
+- docker
+script:
+- wget -q https://github.com/paulcarroty/mock-travis/releases/download/stable/mock-travis
+  && chmod +x mock-travis && ./mock-travis
+before_deploy:
+- docker cp mock-build:/var/tmp/birudo/ /tmp/
+deploy:
+  provider: releases
+  api_key:
+    secure: ur7afw+UEn9BsfNcQWPXBr+jSxJ8J8yGIYqHrEduVLwSlowOxug4M82HhvvZGf8+93pcRDVSE0fKFuMU6nFmS5BzKB1nMsErlboBcGCmIVG8NcC02dTIFZTgULrw4f2u9q5aCBUJco0F46bm1CbnSgnZl926uQzMZf15pYFk0Zxxpm8TXAaxoYA8pB9EwI8YjIC2RboV5RgNPyp5Bz+gsCJTK4phEeh4pG6pAPfGzMCa0IG8oylJ4cOPw2odLZRn/SlSjZYl5dQFZ+Xy756IUBddkH3yk6TxuMQRigHat1gw2byhEkxb0L1HBlF+In5I1q3Eh30Qo1AuY0Ue8VINg2YvlS3XkdXzvbahCsFV11GZ7CwLx+5iyZKWHXDEDxOUax8sKT9O5enXigAAtrhqi5FFhqNlUZpp+ucumRaJLY7+N61il7Wb1+t5aDNB/hbqLatJMQtCEoEdk6rZ38EtV1+IpImVeS87K/Fb0SEZF6znMCaRKH50KxO28dwFgcW5Tx17ScUBti6W/SKf7P9ED7yMWFDMfbWCfWZcLjzXiimpKEjFL/l7imyxT5e8FJCuscBEq5yWK5t4bT9GhpW30sMHZPMPPNZtEMJQd5Y/0QwfMPEsDhjXHSFEYSVrpKk50Se5m2jLw/uUQoVLI6x5AeWTLIZGrE+7aeJztkkbnl4=
+  file_glob: true
+  file: "/tmp/birudo/RPM/*rpm"
+  file: "/tmp/birudo/RPM/*log"
+  skip_cleanup: true
+  overwrite: true
+  on:
+    repo: paulcarroty/travis-rpm-test
+    tags: true
+notifications:
+  slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
