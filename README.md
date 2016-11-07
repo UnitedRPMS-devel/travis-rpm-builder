@@ -1,5 +1,6 @@
-# travis-rpm-builder
-Travis RPM Builder
+# Travis RPM Builder
+
+[![Build Status](https://travis-ci.org/UnitedRPMs/travis-rpm-builder.svg?branch=master)](https://travis-ci.org/UnitedRPMs/travis-rpm-builder)
 
 ### Source code
 * [Original project](https://github.com/nrechn/mock-travis)
