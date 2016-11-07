@@ -7,6 +7,9 @@
 * [Fork](https://github.com/paulcarroty/mock-travis) - now used in URPMs
 
 ### How to use
+
+**Warning:** `.spec` config must have directly HTTP(S) URL for all `Source:` and `Patch:`. See the [example](https://github.com/UnitedRPMs/mpv/blob/master/mpv.spec#L13).
+
 1. Make you changes in code and select a targed in `.travis.yml`. For example, we need to build new ffmpeg release for Fedora 25 and enable notification for Slack:
 ``` Yaml
 mock_travis:
@@ -45,4 +48,7 @@ slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
 ### Documentation:
 * https://docs.travis-ci.com/
 * https://docs.travis-ci.com/user/deployment/releases/
+
+### TODO
+* TravisCI is limited for 50min build time, make configs for CircleCI and GitlabCI (or alternative)
 
