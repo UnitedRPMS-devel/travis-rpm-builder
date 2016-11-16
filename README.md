@@ -52,3 +52,14 @@ slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
 ### TODO
 * TravisCI is limited for 50min build time, make configs for CircleCI and GitlabCI (or alternative)
 
+### How to download the result packages
+
+```
+$ curl -s https://api.github.com/repos/UnitedRPMs/travis-rpm-builder/releases | grep browser_download_url | cut -d '"' -f 4 > urls
+
+//or
+
+$ curl -s https://api.github.com/repos/UnitedRPMs/travis-rpm-builder/releases/latest | grep browser_download_url | cut -d '"' -f 4 > urls
+
+$ wget -c -i urls
+```
