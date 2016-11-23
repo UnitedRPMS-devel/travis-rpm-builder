@@ -1,7 +1,6 @@
 mock_travis:
   mock_config: fedora-25-x86_64
-  packages_buildrequires_git: UnitedRPMs/mpv
-
+  packages_buildrequires_git: gstreamer1-libav
 sudo: required
 services:
 - docker
