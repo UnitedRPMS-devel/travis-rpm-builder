@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-25-x86_64
-  packages_buildrequires_git: UnitedRPMs/gstreamer1-plugins-bad-nonfree
+  packages_buildrequires_git: UnitedRPMs/freetype-freeworld
 sudo: required
 services:
 - docker
