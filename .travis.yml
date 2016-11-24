@@ -1,6 +1,6 @@
 mock_travis:
-  mock_config: fedora-25-x86_64
-  packages_buildrequires_git: UnitedRPMs/freetype-freeworld
+  mock_config: fedora-rawhide-x86_64
+  packages_buildrequires_git: UnitedRPMs/freetype-freeworld-latest
 sudo: required
 services:
 - docker
