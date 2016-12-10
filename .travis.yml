@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/gstreamer1-plugins-bad-nonfree
+  packages_buildrequires_git: UnitedRPMs/gstreamer1-libav
 sudo: required
 services:
 - docker
