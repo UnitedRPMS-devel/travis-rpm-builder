@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-25-x86_64
-  packages_buildrequires_git: UnitedRPMs/avidemux
+  packages_buildrequires_git: UnitedRPMs/kodi-platform
 sudo: required
 services:
 - docker
