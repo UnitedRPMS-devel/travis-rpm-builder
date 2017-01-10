@@ -1,5 +1,5 @@
 mock_travis:
-  mock_config: fedora-25-x86_64
+  mock_config: fedora-rawhide-x86_64
   packages_buildrequires_git: UnitedRPMs/kodi-platform
 sudo: required
 services:
@@ -20,5 +20,5 @@ deploy:
   on:
     repo: UnitedRPMs/travis-rpm-builder
     tags: true
-notifications:
-  slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
+#notifications:
+#  slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
