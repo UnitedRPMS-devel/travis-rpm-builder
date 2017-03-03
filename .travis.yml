@@ -20,5 +20,5 @@ deploy:
   on:
     repo: UnitedRPMs/travis-rpm-builder
     tags: true
-#notifications:
-#  slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
+notifications:
+  slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
