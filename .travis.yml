@@ -3,12 +3,13 @@ mock_travis:
   packages_buildrequires_git: UnitedRPMs/dbgl
 sudo: required
 services:
-- docker
+  - docker
 script:
-- wget -q https://github.com/paulcarroty/mock-travis/releases/download/stable/mock-travis
-  && chmod +x mock-travis && ./mock-travis
+  - wget -q https://github.com/paulcarroty/mock-travis/releases/download/stable/mock-travis 
+    && chmod +x mock-travis 
+    && ./mock-travis
 before_deploy:
-- docker cp mock-build:/var/tmp/birudo/ /tmp/
+  - docker cp mock-build:/var/tmp/birudo/ /tmp/
 deploy:
   provider: releases
   api_key:
