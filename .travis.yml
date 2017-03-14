@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/ffmpeg
+  packages_buildrequires_git: negativo17/nvenc
 sudo: required
 services:
   - docker
