@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/faac
+  packages_buildrequires_git: UnitedRPMs/faad2
 sudo: required
 services:
   - docker
