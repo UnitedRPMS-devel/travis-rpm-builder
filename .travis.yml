@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/dbgl
+  packages_buildrequires_git: UnitedRPMs/x264
 sudo: required
 services:
   - docker
@@ -21,5 +21,5 @@ deploy:
   on:
     repo: UnitedRPMs/travis-rpm-builder
     tags: true
-notifications:
-  slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
+#notifications:
+  #slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
