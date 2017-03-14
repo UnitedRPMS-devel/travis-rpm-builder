@@ -9,6 +9,6 @@ git fetch --tags
 
 git add . && git commit -m "Add $PACKAGE"
 
-git tag -a $PACKAGE${DISTRO^^}$DATE -m $PACKAGE${DISTRO^^}
+git tag -a "$PACKAGE${DISTRO^^}$DATE" -m "$PACKAGE${DISTRO^^}"
 
 git push --tags origin master
