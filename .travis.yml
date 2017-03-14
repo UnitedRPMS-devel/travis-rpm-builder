@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/twolame
+  packages_buildrequires_git: UnitedRPMs/mpv
 sudo: required
 services:
   - docker
