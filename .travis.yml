@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/mlt
+  packages_buildrequires_git: UnitedRPMs/libopenshot-audio 
 
 sudo: required
 services:
