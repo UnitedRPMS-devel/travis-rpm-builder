@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/libmpeg2
+  packages_buildrequires_git: UnitedRPMs/openh264
 sudo: required
 services:
   - docker
