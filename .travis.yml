@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/deadbeef
+  packages_buildrequires_git: UnitedRPMs/vidcutter
 sudo: required
 services:
   - docker
