@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/libva-intel-driver
+  packages_buildrequires_git: UnitedRPMs/fdk-aac
 sudo: required
 services:
   - docker
