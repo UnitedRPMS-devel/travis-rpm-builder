@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/sox-plugins-freeworld
+  packages_buildrequires_git: UnitedRPMs/xmltv
 sudo: required
 services:
   - docker
