@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/devedeng
+  packages_buildrequires_git: UnitedRPMs/fdk-aac
 sudo: required
 services:
   - docker
