@@ -21,6 +21,8 @@ services:
 script:
 - wget -q https://github.com/paulcarroty/mock-travis/releases/download/stable/mock-travis
   && chmod +x mock-travis && ./mock-travis
+  
+################ONLY##FOR##DEPLOY###########################################  
 before_deploy:
   - docker cp mock-build:/var/tmp/birudo/ /tmp/
 deploy:
@@ -34,6 +36,7 @@ deploy:
   on:
     repo: paulcarroty/travis-rpm-test
     tags: true
+################ONLY##FOR##DEPLOY###########################################      
 notifications:
 slack: unitedrpms:lzDykHTpajKrgmGz9NkrO1Hj
 ```
