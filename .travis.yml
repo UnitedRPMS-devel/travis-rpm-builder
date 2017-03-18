@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/wl-kmod
+  packages_buildrequires_git: UnitedRPMs/electron
 sudo: required
 services:
   - docker
