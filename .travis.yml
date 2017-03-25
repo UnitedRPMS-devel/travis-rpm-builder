@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-25-x86_64
-  packages_buildrequires_git: UnitedRPMs/obs-studio
+  packages_buildrequires_git: UnitedRPMs/smplayer-smtube
 sudo: required
 services:
   - docker
