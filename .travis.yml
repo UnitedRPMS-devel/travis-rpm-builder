@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-26-x86_64
-  packages_buildrequires_git: UnitedRPMs/mlt
+  packages_buildrequires_git: UnitedRPMs/gnome-mpv
 sudo: required
 services:
   - docker
