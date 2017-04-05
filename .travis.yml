@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-26-x86_64
-  packages_buildrequires_git: UnitedRPMs/mpv
+  packages_buildrequires_git: UnitedRPMs/avidemux
 sudo: required
 services:
   - docker
