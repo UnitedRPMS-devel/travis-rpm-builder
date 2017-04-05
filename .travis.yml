@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-26-x86_64
-  packages_buildrequires_git: UnitedRPMs/libopenshot
+  packages_buildrequires_git: UnitedRPMs/libopenshot-audio
 sudo: required
 services:
   - docker
