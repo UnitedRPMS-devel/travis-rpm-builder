@@ -1,6 +1,6 @@
 mock_travis:
-  mock_config: fedora-rawhide-i386
-  packages_buildrequires_git: UnitedRPMs/steam
+  mock_config: fedora-rawhide-x86_64
+  packages_buildrequires_git: UnitedRPMs/VirtualBox
 sudo: required
 services:
   - docker
