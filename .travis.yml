@@ -1,6 +1,6 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/VirtualBox
+  packages_buildrequires_git: UnitedRPMs/VirtualBox-kmod
 sudo: required
 services:
   - docker
