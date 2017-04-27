@@ -18,10 +18,11 @@ var BuildConfig = fs.readFileSync('.travis.yml', 'utf8');
 const package = BuildConfig.split('\n')[2].split('/')[1];
 // console.log(package);
 var distro = BuildConfig.split('\n')[1].split('-')[1].replace('rawhide','27');
-console.log(distro);
+// console.log(distro);
 
 const gitAdd = spawn( 'git', [ 'add', '.' ]);
 const gitCommit = spawn('git', ['commit', '-m', package]);
+const gitTag = spawn('git', ['tag', '-a', package + distro +'-'+ datestr, '-m', package + distro]);
 
-console.log(gitCommit.stderr.toString());
-console.log(gitCommit.stdout.toString());
+console.log(gitTag.stderr.toString());
+console.log(gitTag.stdout.toString());
