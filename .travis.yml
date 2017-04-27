@@ -1,6 +1,6 @@
 mock_travis:
-  mock_config: fedora-25-x86_64
-  packages_buildrequires_git: UnitedRPMs/mpv
+  mock_config: fedora-27-x86_64
+  packages_buildrequires_git: UnitedRPMs/libva-intel-driver
 sudo: required
 services:
   - docker
