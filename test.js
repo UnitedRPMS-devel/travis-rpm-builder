@@ -25,10 +25,8 @@ if (~gitAdd.stderr) { console.log(gitAdd.stderr.toString());  }
 const gitCommit = spawn('git', ['commit', '-m', package]);
 if (~gitCommit.stderr) { console.log(gitCommit.stderr.toString());  }
 
-
 const gitTag = spawn('git', ['tag', '-a', package + '-F' + distro +'-'+ datestr, '-m', package + distro]);
 if (~gitTag.stderr) { console.log(gitTag.stderr.toString());  }
 
-
 const gitPush = spawn('git', ['push', '--tags', 'origin', 'master']);
-if (~gitPush.stderr) { console.log(gitPush.stderr.toString());  }
+// if (~gitPush.stderr) { console.log(gitPush.stderr.toString());  }

@@ -1,5 +1,5 @@
 mock_travis:
-  mock_config: fedora-rawhide-x86_64
+  mock_config: fedora-26-x86_64
   packages_buildrequires_git: UnitedRPMs/mpv
 sudo: required
 services:
