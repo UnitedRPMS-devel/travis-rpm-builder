@@ -27,7 +27,7 @@ const gitCommit = spawn('git', ['commit', '-m', package]);
 if (~gitCommit.stderr) { console.log(gitCommit.stderr.toString());  }
 
 
-const gitTag = spawn('git', ['tag', '-a', package + 'F' + distro +'-'+ datestr, '-m', package + distro]);
+const gitTag = spawn('git', ['tag', '-a', package + '-F' + distro +'-'+ datestr, '-m', package + distro]);
 if (~gitTag.stderr) { console.log(gitTag.stderr.toString());  }
 
 
