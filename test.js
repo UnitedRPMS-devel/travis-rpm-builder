@@ -21,9 +21,15 @@ var distro = BuildConfig.split('\n')[1].split('-')[1].replace('rawhide','27');
 // console.log(distro);
 
 const gitAdd = spawn( 'git', [ 'add', '.' ]);
-const gitCommit = spawn('git', ['commit', '-m', package]);
-const gitTag = spawn('git', ['tag', '-a', package + distro +'-'+ datestr, '-m', package + distro]);
-const gitPush = spawn('git', ['push', '--tags', 'origin', 'master']);
+if (~gitAdd.stderr) { console.log(gitAdd.stderr.toString());  }
 
-console.log(gitPush.stderr.toString());
-console.log(gitPush.stdout.toString());
+const gitCommit = spawn('git', ['commit', '-m', package]);
+if (~gitCommit.stderr) { console.log(gitCommit.stderr.toString());  }
+
+
+const gitTag = spawn('git', ['tag', '-a', package + distro +'-'+ datestr, '-m', package + distro]);
+if (~gitTag.stderr) { console.log(gitTag.stderr.toString());  }
+
+
+const gitPush = spawn('git', ['push', '--tags', 'origin', 'master']);
+if (~gitPush.stderr) { console.log(gitPush.stderr.toString());  }
