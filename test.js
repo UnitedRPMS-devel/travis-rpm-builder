@@ -21,7 +21,7 @@ var distro = BuildConfig.split('\n')[1].split('-')[1].replace('rawhide','27');
 console.log(distro);
 
 const gitAdd = spawn( 'git', [ 'add', '.' ]);
-const gitCommit = spawn('git', ['commit', '-m', '`package`']);
+const gitCommit = spawn('git', ['commit', '-m', `package`]);
 
 console.log(gitCommit.stderr.toString());
 console.log(gitCommit.stdout.toString());
