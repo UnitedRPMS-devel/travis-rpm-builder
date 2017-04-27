@@ -1,12 +1,12 @@
 mock_travis:
-  mock_config: fedora-25-x86_64
+  mock_config: fedora-rawhide-x86_64
   packages_buildrequires_git: UnitedRPMs/VirtualBox-kmod
 sudo: required
 services:
   - docker
 script:
-  - wget -q https://github.com/paulcarroty/mock-travis/releases/download/stable/mock-travis 
-    && chmod +x mock-travis 
+  - wget -q https://github.com/paulcarroty/mock-travis/releases/download/stable/mock-travis
+    && chmod +x mock-travis
     && ./mock-travis
 before_deploy:
   - docker cp mock-build:/var/tmp/birudo/ /tmp/
