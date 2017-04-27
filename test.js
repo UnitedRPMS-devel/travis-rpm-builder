@@ -8,7 +8,7 @@
 // git tag -a "$PACKAGE-${DISTRO^^}-$DATE" -m "$PACKAGE-${DISTRO^^}"
 // git push --tags origin master
 var fs = require('fs');
-const spawn = require( 'child_process' ).spawnSync;
+const spawn = require('child_process').spawnSync;
 
 
 const datestr = new Date().toISOString().replace(/:/g, '-');
@@ -23,6 +23,7 @@ var distro = BuildConfig.split('\n')[1].split('-')[1].replace('rawhide','27');
 const gitAdd = spawn( 'git', [ 'add', '.' ]);
 const gitCommit = spawn('git', ['commit', '-m', package]);
 const gitTag = spawn('git', ['tag', '-a', package + distro +'-'+ datestr, '-m', package + distro]);
+const gitPush = spawn('git', ['push', '--tags', 'origin', 'master']);
 
-console.log(gitTag.stderr.toString());
-console.log(gitTag.stdout.toString());
+console.log(gitPush.stderr.toString());
+console.log(gitPush.stdout.toString());
