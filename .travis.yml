@@ -1,12 +1,13 @@
 mock_travis:
   mock_config: fedora-rawhide-x86_64
-  packages_buildrequires_git: UnitedRPMs/libva-intel-driver
+  packages_buildrequires_git: UnitedRPMs/VirtualBox
 sudo: required
 services:
   - docker
 script:
   - wget -q https://github.com/paulcarroty/mock-travis/releases/download/stable/mock-travis
     && chmod +x mock-travis
+    && while true; do sleep 9m && echo '|'; done &
     && ./mock-travis
 before_deploy:
   - docker cp mock-build:/var/tmp/birudo/ /tmp/
