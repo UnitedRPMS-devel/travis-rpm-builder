@@ -22,7 +22,7 @@ var distro = BuildConfig.split('\n')[1].split('-')[1].replace('rawhide','27');
 const gitAdd = spawn( 'git', [ 'add', '.' ]);
 if (~gitAdd.stderr) { console.log(gitAdd.stderr.toString());  }
 
-const gitCommit = spawn('/usr/bin/git', ['commit', '-m', package]);
+const gitCommit = spawn('/usr/bin/git', ['commit', '-m', package + '-F' + distro]);
 if (~gitCommit.stderr) { console.log(gitCommit.stderr.toString());  }
 
 const gitTag = spawn('/usr/bin/git', ['tag', '-a', package + '-F' + distro +'-'+ datestr, '-m', package + distro]);
